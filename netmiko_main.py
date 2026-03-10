@@ -6,7 +6,7 @@ routers = [
         "device_type": "cisco_ios",
         "host": "R1",
         "username": "root",
-        "password": "cisco"
+        "password": "root"
     },
     {
         "name": "R2",
