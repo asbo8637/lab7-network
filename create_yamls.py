@@ -1,7 +1,7 @@
 import csv
 import os
 
-output_dir = "routers/vars"
+output_dir = "roles/routers/vars"
 os.makedirs(output_dir, exist_ok=True)
 
 with open("vars.csv", newline="") as csvfile:
@@ -19,3 +19,21 @@ with open("vars.csv", newline="") as csvfile:
                         f.write(f"{key}: {value}\n")
                     else:
                         f.write(f'{key}: "{value}"\n')
+
+
+
+# Create main.yml
+main_yml_content = '''---
+- name: Load router variables
+  include_vars: "vars/{{ inventory_hostname }}.yml"
+
+- name: Generate configuration file
+  template:
+    src: "lab_jinja2_template.j2"
+    dest: "files/{{ inventory_hostname }}.conf"
+'''
+
+main_yml_path = os.path.join("roles", "routers", "tasks", "main.yml")
+os.makedirs(os.path.dirname(main_yml_path), exist_ok=True)
+with open(main_yml_path, "w") as main_yml_file:
+    main_yml_file.write(main_yml_content)
