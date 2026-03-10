@@ -30,7 +30,7 @@ main_yml_content = '''---
 - name: Generate configuration file
   template:
     src: "lab_jinja2_template.j2"
-    dest: "files/{{ inventory_hostname }}.conf"
+    dest: "roles/routers/files/{{ inventory_hostname }}.conf"
 '''
 
 main_yml_path = os.path.join("roles", "routers", "tasks", "main.yml")
