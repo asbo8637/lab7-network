@@ -30,7 +30,7 @@ for router in routers:
 
     connection = ConnectHandler(**router)
 
-    config_file = f"roles/routers/files/{router['name']}.cfg"
+    config_file = f"roles/routers/files/{router['name']}.conf"
 
     with open(config_file) as f:
         commands = f.read().splitlines()

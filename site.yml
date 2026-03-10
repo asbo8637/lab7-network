@@ -2,6 +2,7 @@
 - name: Generate cfg files for routers
   hosts: routers
   gather_facts: false
+  connection: local
 
   roles:
     - routers
