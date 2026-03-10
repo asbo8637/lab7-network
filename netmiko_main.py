@@ -4,21 +4,21 @@ routers = [
     {
         "name": "R1",
         "device_type": "cisco_ios",
-        "host": "198.51.100.11",
+        "host": "R1",
         "username": "root",
         "password": "cisco"
     },
     {
         "name": "R2",
         "device_type": "cisco_ios",
-        "host": "198.51.100.12",
+        "host": "R2",
         "username": "root",
         "password": "root"
     },
     {
         "name": "R3",
         "device_type": "cisco_ios",
-        "host": "198.51.100.13",
+        "host": "R3",
         "username": "root",
         "password": "root"
     }
