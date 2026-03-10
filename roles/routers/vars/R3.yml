@@ -1,0 +1,7 @@
+hostname: "R3"
+loopback_ip: "30.0.0.1"
+int00_ip: "198.51.100.13"
+int10_ip: "198.51.102.5"
+int20_ip: 
+ospf_process: 3
+ospf_area: 0

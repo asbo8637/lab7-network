@@ -1,0 +1,8 @@
+---
+- name: Load router variables
+  include_vars: "vars/{{ inventory_hostname }}.yml"
+
+- name: Generate configuration file
+  template:
+    src: "lab_jinja2_template.j2"
+    dest: "routers/files/{{ inventory_hostname }}.cfg"
