@@ -5,4 +5,4 @@
   connection: local
 
   roles:
-    - routersTASK [routers : Generate configuration file]
+    - routers
